@@ -16,7 +16,7 @@ app.use(express.json());
 //     res.sendFile(path.join(__dirname, '/public/index.html'))
 // });
 
-app.get('/error', function(req, res) {
+app.get('/names', function(req, res) {
     getNames()
     res.sendFile(path.join(__dirname, '/public/index.html'))
 });
