@@ -5,7 +5,7 @@ const path = require('path');
 app.use(express.json());
 
 app.get('/', function(req, res) {
-    res.sendFile(path.join('./public/index.html'))
+    res.sendFile(path.join(__dirname, '/public/index.html'))
 });
 
 const port = process.env.PORT || 4500;
