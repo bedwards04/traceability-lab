@@ -18,13 +18,14 @@ app.get('/names', function(req, res) {
     rollbar.error('user went to wrong endpoint')
 });
 
-try {
-    nonExistentFunction();
-} catch(error) {
-    console.error(error)
-};
+//CODE TO THROW AN ERROR ON ROLLBAR
+// try {
+//     nonExistentFunction();
+// } catch(error) {
+//     console.error(error)
+// };
 
-document.getElementById(nonExistentFunction).click();
+// document.getElementById(nonExistentFunction).click();
 
 const port = process.env.PORT || 4500;
 
