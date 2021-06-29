@@ -8,11 +8,11 @@ const rollbar = new Rollbar({
   captureUnhandledRejections: true
 });
 
+rollbar.log('Hello world')
 
 app.use(express.json());
 
 app.get('/', function(req, res) {
-    rollbar.log('Hello world')
     res.sendFile(path.join(__dirname, '/public/index.html'))
 });
 
