@@ -8,17 +8,11 @@ const rollbar = new Rollbar({
   captureUnhandledRejections: true
 });
 
-rollbar.log('Hello world')
-
 app.use(express.json());
 
-// app.get('/', function(req, res) {
-//     res.sendFile(path.join(__dirname, '/public/index.html'))
-// });
 
 app.get('/names', function(req, res) {
     getNames()
-    res.sendFile(path.join(__dirname, '/public/index.html'))
 });
 
 const port = process.env.PORT || 4500;
