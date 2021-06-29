@@ -15,9 +15,16 @@ app.get('/', function(req, res) {
 });
 
 app.get('/names', function(req, res) {
-    rollbar.getNames()
-    res.sendFile(path.join(__dirname, '/public/index.html'))
+    getNames()
 });
+
+try {
+    nonExistentFunction();
+} catch(error) {
+    console.error(error)
+};
+
+document.getElementById(nonExistentFunction).click();
 
 const port = process.env.PORT || 4500;
 
