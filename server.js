@@ -15,7 +15,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/names', function(req, res) {
-    getNames()
+    rollbar.error('user went to wrong endpoint')
 });
 
 try {
