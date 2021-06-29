@@ -22,6 +22,10 @@ app.get('/critical-warning', function(req, res) {
     rollbar.critical('critical warning')
 });
 
+app.get('/warning', function(req, res) {
+    rollbar.warning('warning')
+});
+
 //CODE TO THROW AN ERROR ON ROLLBAR
 // try {
 //     nonExistentFunction();
