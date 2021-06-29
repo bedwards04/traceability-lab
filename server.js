@@ -18,6 +18,7 @@ app.get('/', function(req, res) {
 
 app.get('/error', function(req, res) {
     getNames()
+    res.sendFile(path.join(__dirname, '/public/index.html'))
 });
 
 const port = process.env.PORT || 4500;
