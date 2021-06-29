@@ -12,8 +12,8 @@ app.use(express.json());
 
 
 app.get('/names', function(req, res) {
+    rollbar.getNames()
     res.sendFile(path.join(__dirname, '/public/index.html'))
-    getNames()
 });
 
 const port = process.env.PORT || 4500;
