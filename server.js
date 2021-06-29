@@ -14,8 +14,12 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '/public/index.html'))
 });
 
-app.get('/names', function(req, res) {
-    rollbar.error('user went to wrong endpoint')
+app.get('/error', function(req, res) {
+    rollbar.error('wrong endpoint')
+});
+
+app.get('/critical-warning', function(req, res) {
+    rollbar.critical('critical warning')
 });
 
 //CODE TO THROW AN ERROR ON ROLLBAR
