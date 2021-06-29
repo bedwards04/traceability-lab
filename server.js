@@ -12,9 +12,9 @@ rollbar.log('Hello world')
 
 app.use(express.json());
 
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, '/public/index.html'))
-});
+// app.get('/', function(req, res) {
+//     res.sendFile(path.join(__dirname, '/public/index.html'))
+// });
 
 app.get('/error', function(req, res) {
     getNames()
